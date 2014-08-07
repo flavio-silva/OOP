@@ -17,12 +17,12 @@ class Cliente
 
 $clientes = file(__DIR__ . '/clientes.txt');
 
-$arrayClientes = new ArrayObject();
+$arrayClientes = array();
 for($i = 0; $i < sizeof($clientes); $i++) {
         $cliente = explode("\t",$clientes[$i]);
 
         $objCliente = new Cliente();
-    $objCliente->id = $i;
+        $objCliente->id = $i;
         $objCliente->nome = $cliente[0];
         $objCliente->sexo = $cliente[1];
         $objCliente->telefone = $cliente[2];
@@ -33,5 +33,5 @@ for($i = 0; $i < sizeof($clientes); $i++) {
         $objCliente->estado = $cliente[7];
         $objCliente->dataNascimento = $cliente[8];
 
-        $arrayClientes->offsetSet($i,$objCliente );
+        $arrayClientes[] = $objCliente;
 }

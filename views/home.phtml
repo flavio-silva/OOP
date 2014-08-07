@@ -1,13 +1,29 @@
-<?php require_once __DIR__ . '/../Cliente.php'?>
+<?php
+require_once __DIR__ . '/../Cliente.php';
+$orderBy = isset($_GET['orderBy'])?($_GET['orderBy']):('asc');
+if($orderBy == 'desc') {
+    krsort($arrayClientes);
+} else {
+    ksort($arrayClientes);
+}
+?>
 
 <h3 class="text-center">Lista de Clientes</h3>
-<br />
+<p>
+    <span class="text-info">Listar de forma:</span>
+    <a href="/home?orderBy=asc" class="btn btn-link">Ascendente</a>
+    |
+    <a href="/home?orderBy=desc" class="btn btn-link">Descendente</a>
+</p>
+
 <table class="table tab-pane">
+    <th>ID</th>
     <th>Nome</th>    
     <th>Ação</th>
 <?php foreach($arrayClientes as $cliente):?>
     <tr>
-        <td><?=$cliente->nome?></td>
+        <td class="col-lg-1"><?=$cliente->id?></td>
+        <td class="col-lg-1"><?=$cliente->nome?></td>
         <td><a href="/cliente?id=<?=$cliente->id?>">Visualizar</a></td>
     </tr>
 <?php endforeach;?>
