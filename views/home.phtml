@@ -1,0 +1,14 @@
+<?php require_once __DIR__ . '/../Cliente.php'?>
+
+<h3 class="text-center">Lista de Clientes</h3>
+<br />
+<table class="table tab-pane">
+    <th>Nome</th>    
+    <th>Ação</th>
+<?php foreach($arrayClientes as $cliente):?>
+    <tr>
+        <td><?=$cliente->nome?></td>
+        <td><a href="/cliente?id=<?=$cliente->id?>">Visualizar</a></td>
+    </tr>
+<?php endforeach;?>
+</table>

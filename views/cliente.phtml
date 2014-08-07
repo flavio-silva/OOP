@@ -1,0 +1,54 @@
+<?php
+require_once __DIR__ .'/../Cliente.php';
+/* @var $arrayClientes ArrayObject*/
+$id = isset($_GET['id'])?($_GET['id']):(0);
+
+if($arrayClientes->offsetExists($id)) {
+    $cliente = $arrayClientes->offsetGet($id);
+}
+
+/* @var $clientes Cliente*/
+?>
+<?php if($arrayClientes->offsetExists($id)):?>
+<h3 class="text-left">Informações do cliente: <?= $cliente->nome?></h3>
+<br/>
+<table class="table table-bordered">
+    <tr>
+        <td class="col-lg-1">Nome:</td>
+        <td class="col-lg-12"><?= $cliente->nome?></td>
+    </tr>
+    <tr>
+        <td class="col-lg-1">Sexo:</td>
+        <td class="col-lg-12"><?= $cliente->sexo?></td>
+    </tr>
+    <tr>
+        <td class="col-lg-1">Telefone:</td>
+        <td class="col-lg-12"><?= $cliente->telefone?></td>
+    </tr>
+    <tr>
+        <td class="col-lg-1">Endereço:</td>
+        <td class="col-lg-12"><?= $cliente->endereco?></td>
+    </tr>
+    <tr>
+        <td class="col-lg-1">CEP:</td>
+        <td class="col-lg-12"><?= $cliente->cep?></td>
+    </tr>
+
+    <tr>
+        <td class="col-lg-1">Bairro:</td>
+        <td class="col-lg-12"><?= $cliente->bairro?></td>
+    </tr>
+    <tr>
+        <td class="col-lg-1">Cidade:</td>
+        <td class="col-lg-12"><?= $cliente->estado?></td>
+    </tr>
+    <tr>
+        <td class="col-lg-1">Data de Nascimento:</td>
+        <td class="col-lg-12"><?= $cliente->dataNascimento?></td>
+    </tr>
+</table>
+<?php else:?>
+<h4 class="alert alert-danger">Cliente inexistente</h4>
+<?php endif;?>
+
+<a href="/home" class="btn btn-primary">Voltar à lista</a>

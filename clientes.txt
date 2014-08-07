@@ -1,0 +1,10 @@
+Jacyra	Masculino	9516-3359	Rua Belmiro Braga	10285-446	Vila Átila de Paiva	Catas Altas da Noruega	RO	20/06/2000
+Beatrice	Masculino	9818-2511	Av. Sinfrônio Brochado	10431-992	Araguaia	Eugenopolis	SC	31/01/1997
+Dalila	Masculino	9680-5822	Rua Goitacazes	10764-126	Nova Granada	Inhauma	AM	17/08/1992
+Marco	Masculino	9462-9166	Av. Olegário Maciel	10609-618	Unidas	Candeias	PR	21/07/1992
+Nathanael	Masculino	9197-6627	Av. Uruguai	10280-887	Vila Canto do Sabiá	Novorizonte	MS	17/07/1985
+Magda	Feminino	9385-5344	Rua Curitiba	10476-875	Guarani	Bom Sucesso	AP	16/04/1962
+Adalberto	Feminino	9765-9393	Rua Mato Grosso	10676-179	Vila Tirol	Chale	MG	23/05/1986
+Latifa	Masculino	9635-9746	Rua Conceição do Mato Dentro	10804-812	Vila Clóris	Pimenta	RN	03/12/1967
+Odette	Feminino	9289-6696	Av. Waldomiro Lobo	10687-144	São Gonçalo	Lagoas	PA	17/01/1991
+Jade	Feminino	9428-4800	Rua Bernardo Guimarães	10149-101	Vila Olhos d'Água	Carmo do Rio Claro	MS	13/10/1984
