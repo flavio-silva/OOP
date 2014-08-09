@@ -1,10 +1,10 @@
-Superzoom	38.723.265/0001-90	9694-3670	Av. Portugal	10686-991	Vila Boa Vista	Santo Antonio do Retiro	GO
-Clinicbridge	32.441.574/0001-91	9251-5890	Av. Cristóvão Colombo	10767-889	Vila Jardim Montanhês	Porto Firme	MT
-Skideo	81.656.047/0001-00	9192-6424	Av. Sinfrônio Brochado	10355-571	Betânia	São Tiago	MA
-Levebox	21.128.155/0001-88	9809-7945	Av. Getúlio Vargas	10494-349	Olaria	Conceicao das Pedras	MT
-Myness	55.840.547/0001-97	9195-7664	Rua dos Tamoios	10926-702	Liberdade	Frutal	ES
-Bible	51.958.850/0001-38	9319-9554	Av. Cristiano Machado	10925-797	Barreiro	Matias Barbosa	PE
-Betacast	74.612.762/0001-85	9196-3836	Av. Presidente Antônio Carlos	10649-239	Maria Teresa	Fruta de Leite	RN
-Tavee	77.154.927/0001-00	9763-3959	Rua Gávea	10164-445	São Salvador	Chacara	ES
-Youpedia	81.659.333/0001-29	9789-3244	Rua Bernarda Silvestre	10756-790	Nossa Senhora da Conceição	Monte Alegre de Minas	PR
-Agilcero	63.155.964/0001-29	9608-7006	Av. Olinto Meireles	10989-907	Lagoinha Leblon	Ouro Branco	PR
+1	Superzoom	38.723.265/0001-90	9694-3670	Av. Portugal	10686-991	Vila Boa Vista	Santo Antonio do Retiro	GO
+2	Clinicbridge	32.441.574/0001-91	9251-5890	Av. Cristóvão Colombo	10767-889	Vila Jardim Montanhês	Porto Firme	MT
+3	Skideo	81.656.047/0001-00	9192-6424	Av. Sinfrônio Brochado	10355-571	Betânia	São Tiago	MA
+4	Levebox	21.128.155/0001-88	9809-7945	Av. Getúlio Vargas	10494-349	Olaria	Conceicao das Pedras	MT
+5	Myness	55.840.547/0001-97	9195-7664	Rua dos Tamoios	10926-702	Liberdade	Frutal	ES
+6	Bible	51.958.850/0001-38	9319-9554	Av. Cristiano Machado	10925-797	Barreiro	Matias Barbosa	PE
+7	Betacast	74.612.762/0001-85	9196-3836	Av. Presidente Antônio Carlos	10649-239	Maria Teresa	Fruta de Leite	RN
+8	Tavee	77.154.927/0001-00	9763-3959	Rua Gávea	10164-445	São Salvador	Chacara	ES
+9	Youpedia	81.659.333/0001-29	9789-3244	Rua Bernarda Silvestre	10756-790	Nossa Senhora da Conceição	Monte Alegre de Minas	PR
+10	Agilcero	63.155.964/0001-29	9608-7006	Av. Olinto Meireles	10989-907	Lagoinha Leblon	Ouro Branco	PR
