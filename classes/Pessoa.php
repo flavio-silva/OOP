@@ -1,6 +1,6 @@
 <?php
 
-abstract class Cliente
+abstract class Pessoa
 {
     private $id;
     private $nome;
