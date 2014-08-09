@@ -1,48 +1,48 @@
 <?php
-require_once __DIR__ .'/../Cliente.php';
-/* @var $arrayClientes ArrayObject*/
+require_once __DIR__ .'/../classes/arrayClientes.php';
+
 $id = isset($_GET['id'])?($_GET['id']):(0);
 
-if(array_key_exists($id,$arrayClientes)) {
-    $cliente = $arrayClientes[$id];
+if(array_key_exists($id,$clientes)) {
+    $cliente = $clientes[$id];
 }
 ?>
-<?php if(array_key_exists($id, $arrayClientes)):?>
-<h4 class="text-left">Informações do cliente: <?= $cliente->nome?></h4>
+<?php if(array_key_exists($id, $clientes)):?>
+<h4 class="text-left">Informações do cliente: <?= $cliente->getNome()?></h4>
 <br/>
 <table class="table table-bordered">
     <tr>
         <td class="col-lg-1">Nome:</td>
-        <td class="col-lg-12"><?= $cliente->nome?></td>
+        <td class="col-lg-12"><?= $cliente->getNome()?></td>
     </tr>
     <tr>
         <td class="col-lg-1">Sexo:</td>
-        <td class="col-lg-12"><?= $cliente->sexo?></td>
+        <td class="col-lg-12"><?= $cliente->getSexo()?></td>
     </tr>
     <tr>
         <td class="col-lg-1">Telefone:</td>
-        <td class="col-lg-12"><?= $cliente->telefone?></td>
+        <td class="col-lg-12"><?= $cliente->getTelefone()?></td>
     </tr>
     <tr>
         <td class="col-lg-1">Endereço:</td>
-        <td class="col-lg-12"><?= $cliente->endereco?></td>
+        <td class="col-lg-12"><?= $cliente->getEndereco()?></td>
     </tr>
     <tr>
         <td class="col-lg-1">CEP:</td>
-        <td class="col-lg-12"><?= $cliente->cep?></td>
+        <td class="col-lg-12"><?= $cliente->getCep()?></td>
     </tr>
 
     <tr>
         <td class="col-lg-1">Bairro:</td>
-        <td class="col-lg-12"><?= $cliente->bairro?></td>
+        <td class="col-lg-12"><?= $cliente->getBairro()?></td>
     </tr>
     <tr>
         <td class="col-lg-1">Cidade:</td>
-        <td class="col-lg-12"><?= $cliente->estado?></td>
+        <td class="col-lg-12"><?= $cliente->getEstado()?></td>
     </tr>
     <tr>
         <td class="col-lg-1">Data de Nascimento:</td>
-        <td class="col-lg-12"><?= $cliente->dataNascimento?></td>
+        <td class="col-lg-12"><?= $cliente->getDataNascimento()?></td>
     </tr>
 </table>
 <?php else:?>

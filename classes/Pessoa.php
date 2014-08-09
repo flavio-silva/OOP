@@ -124,5 +124,21 @@ abstract class Pessoa implements ClassificacaoInterface
         return $this->telefone;
     }
 
+    /**
+     * @param mixed $cidade
+     */
+    public function setCidade($cidade)
+    {
+        $this->cidade = $cidade;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCidade()
+    {
+        return $this->cidade;
+    }
+
 
 } 

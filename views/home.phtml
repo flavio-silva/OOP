@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../Cliente.php';
+require_once __DIR__ . '/../classes/arrayClientes.php';
 $orderBy = isset($_GET['orderBy'])?($_GET['orderBy']):('asc');
 if($orderBy == 'desc') {
-    krsort($arrayClientes);
+    krsort($clientes);
 } else {
-    ksort($arrayClientes);
+    ksort($clientes);
 }
 ?>
 
@@ -20,11 +20,11 @@ if($orderBy == 'desc') {
     <th>ID</th>
     <th>Nome</th>    
     <th>Ação</th>
-<?php foreach($arrayClientes as $cliente):?>
+<?php foreach($clientes as $cliente):?>
     <tr>
-        <td class="col-lg-1"><?=$cliente->id?></td>
-        <td class="col-lg-1"><?=$cliente->nome?></td>
-        <td><a href="/cliente?id=<?=$cliente->id?>">Visualizar</a></td>
+        <td class="col-lg-1"><?=$cliente->getId()?></td>
+        <td class="col-lg-1"><?=$cliente->getNome()?></td>
+        <td><a href="/cliente?id=<?=$cliente->getId()?>">Visualizar</a></td>
     </tr>
 <?php endforeach;?>
 </table>
