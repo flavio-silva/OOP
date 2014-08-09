@@ -55,5 +55,13 @@ class Fisica extends Pessoa
         return $this->sexo;
     }
 
+    public function classifica($estrelas)
+    {
+        if(is_int($estrelas) && in_array($estrelas, array(1,2,3,4,5))) {
+            $this->estrelas = $estrelas ;
+            return true;
+        }
+        return false;
+    }
 
 } 

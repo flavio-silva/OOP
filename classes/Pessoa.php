@@ -1,14 +1,15 @@
 <?php
 
-abstract class Pessoa
+abstract class Pessoa implements ClassificacaoInterface
 {
-    private $id;
-    private $nome;
-    private $telefone;
-    private $endereco;
-    private $cep;
-    private $bairro;
-    private $estado;
+    protected  $id;
+    protected  $nome;
+    protected  $telefone;
+    protected  $endereco;
+    protected  $cep;
+    protected  $bairro;
+    protected  $estado;
+    protected $estrelas;
 
     /**
      * @param mixed $bairro
