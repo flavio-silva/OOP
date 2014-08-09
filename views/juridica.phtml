@@ -1,0 +1,52 @@
+<?php
+require_once __DIR__ .'/../classes/arrayClientes.php';
+
+$id = isset($_GET['id'])?($_GET['id']):(0);
+
+if(array_key_exists($id,$clientes)) {
+    $cliente = $clientes[$id];
+}
+?>
+<?php if(array_key_exists($id, $clientes)):?>
+    <h4 class="text-left">Informações do cliente: <?= $cliente->getNome()?></h4>
+    <br/>
+    <table class="table table-bordered">
+        <tr>
+            <td class="col-lg-1">Nome:</td>
+            <td class="col-lg-12"><?= $cliente->getNome()?></td>
+        </tr>
+        <tr>
+            <td class="col-lg-1">CNPJ:</td>
+            <td class="col-lg-12"><?= $cliente->getCnpj()?></td>
+        </tr>
+        <tr>
+            <td class="col-lg-1">Telefone:</td>
+            <td class="col-lg-12"><?= $cliente->getTelefone()?></td>
+        </tr>
+        <tr>
+            <td class="col-lg-1">Endereço:</td>
+            <td class="col-lg-12"><?= $cliente->getEndereco()?></td>
+        </tr>
+        <tr>
+            <td class="col-lg-1">CEP:</td>
+            <td class="col-lg-12"><?= $cliente->getCep()?></td>
+        </tr>
+
+        <tr>
+            <td class="col-lg-1">Bairro:</td>
+            <td class="col-lg-12"><?= $cliente->getBairro()?></td>
+        </tr>
+        <tr>
+            <td class="col-lg-1">Cidade:</td>
+            <td class="col-lg-12"><?= $cliente->getCidade()?></td>
+        </tr>
+        <tr>
+            <td class="col-lg-1">Estado:</td>
+            <td class="col-lg-12"><?= $cliente->getEstado()?></td>
+        </tr>
+    </table>
+<?php else:?>
+    <h4 class="alert alert-danger">Cliente inexistente</h4>
+<?php endif;?>
+
+<a href="/home" class="btn btn-primary">Voltar à lista</a>
