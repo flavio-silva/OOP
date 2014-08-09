@@ -7,7 +7,7 @@ if(array_key_exists($id,$clientes)) {
     $cliente = $clientes[$id];
 }
 ?>
-<?php if(array_key_exists($id, $clientes)):?>
+<?php if(array_key_exists($id, $clientes) && $cliente instanceof Fisica):?>
 <h4 class="text-left">Informações do cliente: <?= $cliente->getNome()?></h4>
 <br/>
 <table class="table table-bordered">
