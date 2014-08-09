@@ -8,6 +8,7 @@ abstract class Pessoa implements ClassificacaoInterface
     protected  $endereco;
     protected  $cep;
     protected  $bairro;
+    protected $cidade;
     protected  $estado;
     protected $estrelas;
 
