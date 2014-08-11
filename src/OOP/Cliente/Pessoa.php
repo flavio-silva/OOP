@@ -2,7 +2,7 @@
 
 namespace OOP\Cliente;
 
-use Interfaces\ClassificacaoInterface;
+use OOP\Cliente\Interfaces\ClassificacaoInterface;
 
 abstract class Pessoa implements ClassificacaoInterface
 {
