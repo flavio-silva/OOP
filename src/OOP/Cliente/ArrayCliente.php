@@ -76,5 +76,6 @@ class ArrayCliente
         if($this->populaFisica($fileNameFisica) && $this->populaJuridica($fileNameJuridica)) {
             return $this->clientes;
         }
+        return array();
     }
 }
