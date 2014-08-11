@@ -1,5 +1,9 @@
 <?php
 
+namespace OOP\Cliente;
+
+use Interfaces\ClassificacaoInterface;
+
 abstract class Pessoa implements ClassificacaoInterface
 {
     protected  $id;

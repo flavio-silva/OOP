@@ -1,5 +1,9 @@
 <?php
 
+namespace OOP\Cliente\Types;
+
+use OOP\Cliente\Pessoa;
+
 class Juridica extends Pessoa
 {
     private $cnpj;

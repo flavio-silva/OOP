@@ -1,4 +1,5 @@
 <?php
+namespace OOP\Cliente\Interfaces;
 
 interface ClassificacaoInterface
 {
