@@ -1,5 +1,5 @@
 <?php
-array (
+return array (
   0 => 
   array (
     'id' => '1',
@@ -12,8 +12,7 @@ array (
     'bairro' => 'Vila Átila de Paiva',
     'cidade' => 'Catas Altas da Noruega',
     'estado' => 'RO',
-    'dataNascimento' => '2000-06-20
-',
+    'dataNascimento' => '2000-06-20',
   ),
   1 => 
   array (
@@ -27,8 +26,7 @@ array (
     'bairro' => 'Araguaia',
     'cidade' => 'Eugenopolis',
     'estado' => 'SC',
-    'dataNascimento' => '1997-01-31
-',
+    'dataNascimento' => '1997-01-31',
   ),
   2 => 
   array (
@@ -42,8 +40,7 @@ array (
     'bairro' => 'Nova Granada',
     'cidade' => 'Inhauma',
     'estado' => 'AM',
-    'dataNascimento' => '1992-08-17
-',
+    'dataNascimento' => '1992-08-17',
   ),
   3 => 
   array (
@@ -57,8 +54,7 @@ array (
     'bairro' => 'Unidas',
     'cidade' => 'Candeias',
     'estado' => 'PR',
-    'dataNascimento' => '1992-07-21
-',
+    'dataNascimento' => '1992-07-21',
   ),
   4 => 
   array (
@@ -72,8 +68,7 @@ array (
     'bairro' => 'Vila Canto do Sabiá',
     'cidade' => 'Novorizonte',
     'estado' => 'MS',
-    'dataNascimento' => '1985-07-17
-',
+    'dataNascimento' => '1985-07-17',
   ),
   5 => 
   array (
@@ -87,8 +82,7 @@ array (
     'bairro' => 'Guarani',
     'cidade' => 'Bom Sucesso',
     'estado' => 'AP',
-    'dataNascimento' => '1962-04-16
-',
+    'dataNascimento' => '1962-04-16',
   ),
   6 => 
   array (
@@ -102,8 +96,7 @@ array (
     'bairro' => 'Vila Tirol',
     'cidade' => 'Chale',
     'estado' => 'MG',
-    'dataNascimento' => '1986-05-23
-',
+    'dataNascimento' => '1986-05-23',
   ),
   7 => 
   array (
@@ -117,8 +110,7 @@ array (
     'bairro' => 'Vila Clóris',
     'cidade' => 'Pimenta',
     'estado' => 'RN',
-    'dataNascimento' => '1967-12-03
-',
+    'dataNascimento' => '1967-12-03',
   ),
   8 => 
   array (
@@ -132,8 +124,7 @@ array (
     'bairro' => 'São Gonçalo',
     'cidade' => 'Lagoas',
     'estado' => 'PA',
-    'dataNascimento' => '1991-01-17
-',
+    'dataNascimento' => '1991-01-17',
   ),
   9 => 
   array (
@@ -147,7 +138,6 @@ array (
     'bairro' => 'Vila Olhos d\'Água',
     'cidade' => 'Carmo do Rio Claro',
     'estado' => 'MS',
-    'dataNascimento' => '1984-10-13
-',
+    'dataNascimento' => '1984-10-13',
   ),
 );
