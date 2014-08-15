@@ -16,6 +16,10 @@ abstract class Pessoa implements ClassificacaoInterface
     protected  $estado;
     protected $estrelas;
 
+    public function __construct(array $data = array()) 
+    {
+        Configurator::configure($this, $data);
+    }
     /**
      * @param mixed $bairro
      */
