@@ -1,6 +1,6 @@
 <?php
 
-namespace OOP\Cliente\Types;
+namespace OOP\Cliente;
 
 class Configurator {
     /** Configure a target object with the provided options.
