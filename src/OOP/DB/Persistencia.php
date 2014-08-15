@@ -25,9 +25,9 @@ class Persistencia
     public function persist(Pessoa $cliente) 
     {
         if($cliente instanceof Fisica) {
-            $this->fisica = $cliente;
+            $this->fisica[] = $cliente;
         } elseif($cliente instanceof Juridica) {
-            $this->juridica = $cliente;
+            $this->juridica[] = $cliente;
         }
     }
     
