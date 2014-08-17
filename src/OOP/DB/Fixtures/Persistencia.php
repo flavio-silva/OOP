@@ -1,6 +1,6 @@
 <?php
 
-namespace OOP\DB;
+namespace OOP\Db\Fixtures;
 
 use OOP\Cliente\Pessoa;
 use OOP\Cliente\Types\Fisica;
