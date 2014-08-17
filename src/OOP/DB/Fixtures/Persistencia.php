@@ -28,13 +28,24 @@ class Persistencia {
         }
     }
 
-    public function flush() 
+    private function flushFisica() 
     {
         $sql = <<<EOD
-'insert into fisica values 
-(
-    :id,:nome,:cpf,:sexo,:nascimento,:telefone:,:endereco,:cep,:bairo,:cidade,:estado, null
-)
+            'insert into fisica values 
+            (
+                :id,
+                :nome,
+                :cpf,
+                :sexo,
+                :nascimento,
+                :telefone,
+                :endereco,
+                :cep,
+                :bairo,
+                :cidade,
+                :estado,
+                null
+            )
 EOD;
         $stmt = $this->db->prepare($sql);
         
@@ -42,17 +53,59 @@ EOD;
         foreach ($this->fisica as $fisica) 
         {
             $stmt->bindValue(':id',$fisica->getId());
-            $stmt->bindValue(':nome',$fisica->getId());
-            $stmt->bindValue(':cpf',$fisica->getId());
-            $stmt->bindValue(':sexo',$fisica->getId());
-            $stmt->bindValue(':nascimento',$fisica->getId());
-            $stmt->bindValue(':telefone',$fisica->getId());
-            $stmt->bindValue(':endereco',$fisica->getId());
-            $stmt->bindValue(':cep',$fisica->getId());
-            $stmt->bindValue(':bairro',$fisica->getId());
-            $stmt->bindValue(':cidade',$fisica->getId());
-            $stmt->bindValue(':estado',$fisica->getId());
+            $stmt->bindValue(':nome',$fisica->getNome());
+            $stmt->bindValue(':cpf',$fisica->getCpf());
+            $stmt->bindValue(':sexo',$fisica->getSexo());
+            $stmt->bindValue(':nascimento',$fisica->getDataNascimento());
+            $stmt->bindValue(':telefone',$fisica->getTelefone());
+            $stmt->bindValue(':endereco',$fisica->getEndereco());
+            $stmt->bindValue(':cep',$fisica->getCep());
+            $stmt->bindValue(':bairro',$fisica->getBairro());
+            $stmt->bindValue(':cidade',$fisica->getCidade());
+            $stmt->bindValue(':estado',$fisica->getEstado());
+            $stmt->execute();
         }
+    }
+    
+    private function flushJuridica() 
+    {
+        $sql = <<<EOD
+            'insert into fisica values 
+            (
+                :id,
+                :nome,
+                :cnpj,
+                :telefone,
+                :endereco,
+                :cep,
+                :bairo,
+                :cidade,
+                :estado,
+                null
+            )
+EOD;
+        $stmt = $this->db->prepare($sql);
+        
+        /*@var $fisica \OOP\Cliente\Types\Fisica */
+        foreach ($this->juridica as $juridica) 
+        {
+            $stmt->bindValue(':id',$juridica->getId());
+            $stmt->bindValue(':nome',$juridica->getNome());
+            $stmt->bindValue(':cpf',$juridica->getCpf());            
+            $stmt->bindValue(':telefone',$juridica->getTelefone());
+            $stmt->bindValue(':endereco',$juridica->getEndereco());
+            $stmt->bindValue(':cep',$juridica->getCep());
+            $stmt->bindValue(':bairro',$juridica->getBairro());
+            $stmt->bindValue(':cidade',$juridica->getCidade());
+            $stmt->bindValue(':estado',$juridica->getEstado());
+            $stmt->execute();
+        }
+    }
+    
+    public function flush() 
+    {
+        $this->flushFisica();
+        $this->flushJuridica();
     }
 
 }
