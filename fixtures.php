@@ -11,3 +11,21 @@ $structure->dropTableFisica();
 $structure->createTableFisica();
 $structure->dropTableJuridica();
 $structure->createTableJuridica();
+
+$persistencia = new \OOP\Db\Fixtures\Persistencia($pdo);
+
+$data = include 'fisica.php';
+
+foreach ($data as $cliente)
+{
+    $persistencia->persist(new OOP\Cliente\Types\Fisica($cliente));
+}
+
+$data = include 'juridica.php';
+
+foreach ($data as $cliente)
+{
+    $persistencia->persist(new OOP\Cliente\Types\Juridica($cliente));
+}
+
+$persistencia->flush();
