@@ -5,6 +5,7 @@ namespace OOP\Db\Fixtures;
 use OOP\Cliente\Pessoa;
 use OOP\Cliente\Types\Fisica;
 use OOP\Cliente\Types\Juridica;
+use PDO;
 
 class Persistencia {
 
@@ -31,7 +32,7 @@ class Persistencia {
     private function flushFisica() 
     {
         $sql = <<<EOD
-            'insert into fisica values 
+            insert into fisica values 
             (
                 :id,
                 :nome,
@@ -41,7 +42,7 @@ class Persistencia {
                 :telefone,
                 :endereco,
                 :cep,
-                :bairo,
+                :bairro,
                 :cidade,
                 :estado,
                 null
@@ -52,17 +53,17 @@ EOD;
         /*@var $fisica \OOP\Cliente\Types\Fisica */
         foreach ($this->fisica as $fisica) 
         {
-            $stmt->bindValue(':id',$fisica->getId());
-            $stmt->bindValue(':nome',$fisica->getNome());
-            $stmt->bindValue(':cpf',$fisica->getCpf());
-            $stmt->bindValue(':sexo',$fisica->getSexo());
-            $stmt->bindValue(':nascimento',$fisica->getDataNascimento());
-            $stmt->bindValue(':telefone',$fisica->getTelefone());
-            $stmt->bindValue(':endereco',$fisica->getEndereco());
-            $stmt->bindValue(':cep',$fisica->getCep());
-            $stmt->bindValue(':bairro',$fisica->getBairro());
-            $stmt->bindValue(':cidade',$fisica->getCidade());
-            $stmt->bindValue(':estado',$fisica->getEstado());
+            $stmt->bindValue(':id',$fisica->getId(), PDO::PARAM_INT);
+            $stmt->bindValue(':nome',$fisica->getNome(),PDO::PARAM_STR);
+            $stmt->bindValue(':cpf',$fisica->getCpf(),PDO::PARAM_STR);
+            $stmt->bindValue(':sexo',$fisica->getSexo(),PDO::PARAM_STR);
+            $stmt->bindValue(':nascimento',$fisica->getDataNascimento(),PDO::PARAM_STR);
+            $stmt->bindValue(':telefone',$fisica->getTelefone(),PDO::PARAM_STR);
+            $stmt->bindValue(':endereco',$fisica->getEndereco(),PDO::PARAM_STR);
+            $stmt->bindValue(':cep',$fisica->getCep(),PDO::PARAM_STR);
+            $stmt->bindValue(':bairro',$fisica->getBairro(),PDO::PARAM_STR);
+            $stmt->bindValue(':cidade',$fisica->getCidade(),PDO::PARAM_STR);
+            $stmt->bindValue(':estado',$fisica->getEstado(),PDO::PARAM_STR);
             $stmt->execute();
         }
     }
@@ -70,7 +71,7 @@ EOD;
     private function flushJuridica() 
     {
         $sql = <<<EOD
-            'insert into fisica values 
+            insert into juridica values 
             (
                 :id,
                 :nome,
@@ -78,7 +79,7 @@ EOD;
                 :telefone,
                 :endereco,
                 :cep,
-                :bairo,
+                :bairro,
                 :cidade,
                 :estado,
                 null
@@ -86,18 +87,18 @@ EOD;
 EOD;
         $stmt = $this->db->prepare($sql);
         
-        /*@var $fisica \OOP\Cliente\Types\Fisica */
+        /*@var $juridica \OOP\Cliente\Types\Juridica */
         foreach ($this->juridica as $juridica) 
         {
-            $stmt->bindValue(':id',$juridica->getId());
-            $stmt->bindValue(':nome',$juridica->getNome());
-            $stmt->bindValue(':cpf',$juridica->getCpf());            
-            $stmt->bindValue(':telefone',$juridica->getTelefone());
-            $stmt->bindValue(':endereco',$juridica->getEndereco());
-            $stmt->bindValue(':cep',$juridica->getCep());
-            $stmt->bindValue(':bairro',$juridica->getBairro());
-            $stmt->bindValue(':cidade',$juridica->getCidade());
-            $stmt->bindValue(':estado',$juridica->getEstado());
+            $stmt->bindValue(':id',$juridica->getId(),PDO::PARAM_INT);
+            $stmt->bindValue(':nome',$juridica->getNome(),PDO::PARAM_STR);
+            $stmt->bindValue(':cnpj',$juridica->getCnpj(),PDO::PARAM_STR);
+            $stmt->bindValue(':telefone',$juridica->getTelefone(),PDO::PARAM_STR);
+            $stmt->bindValue(':endereco',$juridica->getEndereco(),PDO::PARAM_STR);
+            $stmt->bindValue(':cep',$juridica->getCep(),PDO::PARAM_STR);
+            $stmt->bindValue(':bairro',$juridica->getBairro(),PDO::PARAM_STR);
+            $stmt->bindValue(':cidade',$juridica->getCidade(),PDO::PARAM_STR);
+            $stmt->bindValue(':estado',$juridica->getEstado(),PDO::PARAM_STR);
             $stmt->execute();
         }
     }
