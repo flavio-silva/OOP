@@ -57,7 +57,7 @@ EOD;
             $stmt->bindValue(':nome',$fisica->getNome(),PDO::PARAM_STR);
             $stmt->bindValue(':cpf',$fisica->getCpf(),PDO::PARAM_STR);
             $stmt->bindValue(':sexo',$fisica->getSexo(),PDO::PARAM_STR);
-            $stmt->bindValue(':nascimento',$fisica->getDataNascimento(),PDO::PARAM_STR);
+            $stmt->bindValue(':nascimento',$fisica->getNascimento(),PDO::PARAM_STR);
             $stmt->bindValue(':telefone',$fisica->getTelefone(),PDO::PARAM_STR);
             $stmt->bindValue(':endereco',$fisica->getEndereco(),PDO::PARAM_STR);
             $stmt->bindValue(':cep',$fisica->getCep(),PDO::PARAM_STR);

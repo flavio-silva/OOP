@@ -8,7 +8,7 @@ class Fisica extends Pessoa
 {
     private $cpf;
     private $sexo;
-    private $dataNascimento;
+    private $nascimento;
 
     /**
      * @param mixed $cpf
@@ -30,7 +30,7 @@ class Fisica extends Pessoa
     /**
      * @param mixed $dataNascimento
      */
-    public function setDataNascimento($dataNascimento)
+    public function setNascimento($dataNascimento)
     {
         $this->dataNascimento = $dataNascimento;
     }
@@ -38,7 +38,7 @@ class Fisica extends Pessoa
     /**
      * @return mixed
      */
-    public function getDataNascimento()
+    public function getNascimento()
     {
         return $this->dataNascimento;
     }
