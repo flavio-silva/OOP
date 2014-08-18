@@ -32,7 +32,7 @@ class Fisica extends Pessoa
      */
     public function setNascimento($dataNascimento)
     {
-        $this->dataNascimento = $dataNascimento;
+        $this->nascimento = $dataNascimento;
     }
 
     /**
@@ -40,7 +40,7 @@ class Fisica extends Pessoa
      */
     public function getNascimento()
     {
-        return $this->dataNascimento;
+        return $this->nascimento;
     }
 
     /**
