@@ -17,7 +17,7 @@ $config = parse_ini_file(__DIR__ . '/../db.ini');
 $repository = new OOP\Cliente\Types\ClienteRepository(new PDO("mysql:host={$config['host']};dbname={$config['dbname']}", $config['username'], $config['passwd']));
 $fisica = $repository->loadFisica();
 $juridica = $repository->loadJuridica();
-$clientes = array_merge($fisica, $juridica);
+$clientes = $fisica + $juridica;
 if(file_exists(__DIR__ . '/../views/' . $route . '.phtml')) {
     require_once __DIR__ . '/../views/' . $route . '.phtml';
 } else {
