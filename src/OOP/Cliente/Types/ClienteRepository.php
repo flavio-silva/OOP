@@ -21,7 +21,7 @@ class ClienteRepository
         $results = array();
         if($result) {
             while($row = $result->fetchObject('\OOP\Cliente\Types\Fisica')) {
-                $results[] = $row;
+                $results[$row->getId()] = $row;
             }
             return $results;
         }
@@ -33,7 +33,7 @@ class ClienteRepository
         $results = array();
         if($result) {
             while($row = $result->fetchObject('\OOP\Cliente\Types\Juridica')) {
-                $results[] = $row;
+                $results[$row->getId()] = $row;
             }
             return $results;
         }
